@@ -248,7 +248,10 @@ body {
 .slider {
     position: relative;
     overflow: hidden;
+    
 }
+
+
 
 .scroll-btn {
     position: absolute;
@@ -335,6 +338,10 @@ body {
     text-align: center;
 }
 
+.slider p{
+    color: darkslateblue;
+    font-weight: 1000;
+}
 
 .novedades-container h2::after {
     content: "";
@@ -354,7 +361,7 @@ body {
 .novedades-card-container {
     display: flex;
     gap: 20px;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     justify-content: flex-start; 
     width: 100%;
@@ -362,8 +369,7 @@ body {
 }
 
 
-
-.cards::-webkit-scrollbar{
+.novedades-card-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -410,17 +416,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.card .footer-card h3 {
-    text-align: center;
-    font-size: 18px;
-    
-}
 
-.card .footer-card p {
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-}
 
 .card .footer-card button:hover {
     background-color: #3b274d;
@@ -440,6 +436,16 @@ body {
     font-size: 40px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.container-section h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: darkslateblue;
+    margin: 8px auto 0;
+    border-radius: 2px;
 }
 
 .grid-container {
@@ -522,16 +528,39 @@ body {
     z-index: 2;
 } 
 
-.text-title h2 {
+.container-section h2 {
     font-size: 40px;
     margin-bottom: 10px;
-    color: #222222;
+    color: #000000;
+
+}
+
+.titulo-container-section::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+    color: darkslateblue;
+}
+
+.container-section p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.novedades-card-container p {
+    font-weight: 1000;
+}
+
+.text-title h2{
+    font-size: 40px;
 }
 
 .text-title p {
     font-size: 20px;
-    color: darkslateblue;
-    font-weight: 500;
 }
 
 .text-title h2::after {
@@ -593,6 +622,9 @@ footer li a {
 
     }
 
+    .scroll-btn.right, .scroll-btn.left {
+        display: none;
+    }
 
     .nav {
         opacity: 0;
@@ -666,5 +698,18 @@ footer li a {
         grid-column: span 1;
         grid-row: span 1;
     }
-    
+
+    .novedades-card-container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .novedades-card-container {
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        scroll-snap-align: start;
+    }
+
 }

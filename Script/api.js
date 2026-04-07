@@ -33,6 +33,12 @@ const renderProductos = async () => {
 
 renderProductos();
 
+const recortarTexto = (texto, max) => {
+    return texto.length > max 
+        ? texto.slice(0, max) + "..." 
+        : texto;
+}
+
 const renderElectrodomesticosDestacados = async() => {
     const productos = await obtenerDatos();
     const contenedor = document.querySelector('.grid-cards-container');
@@ -49,12 +55,13 @@ const renderElectrodomesticosDestacados = async() => {
                 <div class="bg-blur" style="background-image: url('${producto.image}')"></div>
                 <img src="${producto.image}" alt="">
                 <div class="content-grid-card">
-                    <h2>${producto.title}</h2>
+                    <h2 title="${producto.title}">
+                        ${recortarTexto(producto.title, 30)}
+                    </h2>
                     <p>$${producto.price}</p>
                     <button>Ver más</button>
                 </div>
             </div>
-        
         `
     })
 }
