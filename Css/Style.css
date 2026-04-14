@@ -221,6 +221,7 @@ body {
     grid-auto-rows: 200px;
     gap: 15px;
     padding: 20px;
+    cursor: pointer;
 }
 
 .medium-card {
@@ -243,6 +244,20 @@ body {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.medium-card a, 
+.small-card a, 
+.big-card a{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .slider {
