@@ -1,36 +1,24 @@
-const obtenerCategoria = async () => {
-    const res = await fetch('https://fakestoreapi.com/products/categories');
-    const data = await res.json();
-
-    data.forEach(cat => {
-    console.log(cat);
-    });
-
-}
-
 async function obtenerProductosPorCategoria(categoria) {
     const res = await fetch(`https://fakestoreapi.com/products/category/${categoria}`);
     const productos = await res.json();
-    
+
     return productos;
 }
 
 
 
 //Botones para el menú en mobile
-const nav = document.getElementById('nav');
-const abrir = document.getElementById('abrir');
-const cerrar = document.getElementById('cerrar');
+document.addEventListener('click', (e) => {
+    const nav = document.getElementById('nav');
 
+    if(e.target.closest('#abrir')) {
+        nav.classList.add('visible')
+    }
 
-abrir.addEventListener('click', () => {
-    nav.classList.add('visible');
+    if(e.target.closest('#cerrar')) {
+        nav.classList.remove('visible');
+    }
 })
-
-cerrar.addEventListener('click', () => {
-    nav.classList.remove('visible');
-})
-
 
 //renderizado de la página entera
 const contenedor = document.querySelector('.cards-container');
@@ -85,9 +73,10 @@ function renderProductos(productos) {
     productos.forEach(producto => {
         const card = document.createElement("div");
         card.classList.add('card');
+        card.dataset.id = producto.id;
 
         card.innerHTML = `
-            <div class="card-img">
+            <div class="card-img"">
                 <img src="${producto.image}" alt="">
             </div>
             <div class="card-footer">
@@ -118,3 +107,17 @@ async function init() {
 }
 
 init();
+
+//obtener id
+
+document.addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+
+    if(!card) return;
+
+    const id = card.dataset.id;
+
+    if(!id) return;
+
+    window.location.href =`producto.html?id=${id}`;
+});

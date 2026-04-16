@@ -1,15 +1,15 @@
-const nav = document.getElementById('nav');
-const abrir = document.getElementById('abrir');
-const cerrar = document.getElementById('cerrar');
+document.addEventListener('click', (e) => {
+    const nav = document.getElementById('nav');
 
+    if(e.target.closest('#abrir')) {
+        nav.classList.add('visible')
+    }
 
-abrir.addEventListener('click', () => {
-    nav.classList.add('visible');
+    if(e.target.closest('#cerrar')) {
+        nav.classList.remove('visible');
+    }
 })
 
-cerrar.addEventListener('click', () => {
-    nav.classList.remove('visible');
-})
 
 const sliders = document.querySelectorAll('.slider');
 

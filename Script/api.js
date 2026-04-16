@@ -4,12 +4,13 @@ const obtenerDatos = async () => {
     return data;
 }
 
-
+//función para generar mis cards en el contenedor de mi html
 const pintarCards = (contenedor, producto) => {
-    contenedor.innerHTML = "";
+    let html= "";
+
     producto.forEach(producto => {
-        contenedor.innerHTML += `
-            <div class="card">
+        html += `
+            <div class="card" data-action="ver-producto" data-id="${producto.id}">
                     <div class="card-img">
                         <img src="${producto.image}">
                     </div>
@@ -22,23 +23,28 @@ const pintarCards = (contenedor, producto) => {
         
         `;
     });
+    contenedor.innerHTML = html;
 }
 
+//función en la cual llamo a 'pintarCards utilizando im .slice para llamar solo unos cuantos productos
+//y colocarlas en mis cards que se encuentran en novedades-card-container
 const renderProductos = async () => {
     const productos = await obtenerDatos();
-     const contenedores = document.querySelectorAll('.novedades-card-container');
+    const contenedores = document.querySelectorAll('.novedades-card-container');
     pintarCards(contenedores[0], productos.slice(0, 6));
     pintarCards(contenedores[1], productos.slice(6, 12));
 }
 
 renderProductos();
 
+//funcion para recortar el texto que traigo de la API
 const recortarTexto = (texto, max) => {
     return texto.length > max 
         ? texto.slice(0, max) + "..." 
         : texto;
 }
 
+//función para renderizar los datos de la categoria tecnología
 const renderElectrodomesticosDestacados = async() => {
     const productos = await obtenerDatos();
     const contenedor = document.querySelector('.grid-cards-container');
@@ -51,7 +57,7 @@ const renderElectrodomesticosDestacados = async() => {
 
     electrodomesticos.slice(0, 4).forEach(producto => {
         contenedor.innerHTML += `
-            <div class="large-card">
+            <div class="large-card" data-action="ver-producto" data-id="${producto.id}">
                 <div class="bg-blur" style="background-image: url('${producto.image}')"></div>
                 <img src="${producto.image}" alt="">
                 <div class="content-grid-card">
@@ -67,3 +73,19 @@ const renderElectrodomesticosDestacados = async() => {
 }
 
 renderElectrodomesticosDestacados();
+
+//función para obtener el id de cada producto y redirigir a la página de caracteristicas del producto
+
+document.addEventListener('click', (e) => {
+    const element = e.target.closest('[data-action]');
+
+    if(!element) return;
+
+    const action = element.dataset.action;
+
+    if(action === 'ver-producto') {
+        const id = element.dataset.id;
+        window.location.href =`producto.html?id=${id}`;
+    }
+
+})
