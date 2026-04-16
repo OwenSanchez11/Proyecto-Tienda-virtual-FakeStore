@@ -23,6 +23,7 @@ const params  = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
 function renderProducto(data) {
+    document.title = data.title;
     contenedor.innerHTML = "";
 
     contenedor.innerHTML = `

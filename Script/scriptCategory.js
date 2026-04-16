@@ -64,6 +64,7 @@ const cambioBanner = (grupo) => {
     bannerImg.src = data.img;
     document.querySelector('.titulo-categoria').textContent = data.titulo;
     document.querySelector('.banner-desc').textContent = data.descripcion;
+    document.title = `${data.titulo}`;
 }
 
 
