@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/shoppingCar-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Css/categoryStyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <title>Categorias</title>
+    <title>Carrito de compras</title>
 </head>
 <body>
 
     <header class="main-header">
+        
         <div class="top-bar">
             <div class="logo">
-                <a href="index.html">
+                <a href="./index.html">
                     <img src="src/img/logo.png" alt="logo">
                 </a>
             </div>
@@ -33,7 +33,7 @@
             <div class="right-icons">
                 <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
 
-                <a href="#">
+                <a href="./shopping-car.html">
                     <img src="src/img/carrito.png" alt="">
                 </a>
 
@@ -45,38 +45,67 @@
 
 
         </div>
-
     </header>
 
-    <div class="header-container">
-        <div class="header-banner">
-            <img src="" alt="">
-            <div class="overlay"></div>
-        </div>
-        <div class="text-header">   
-            <h1 class="titulo-categoria">Men's Collection</h1>
-            <p class="banner-desc">Las mejores prendas de caballero a tu disposición</p>
-        </div>
-    </div>
+   
+    <section class="container-all">
+            <section class="carrito-compras">
+                <div class="title">
+                    <input type="checkbox" name="check" id="">
+                    <h2>PRODUCTOS DE LA TIENDA</h2>
+                </div>
 
-    <section class="grid-cards">
+                <div class="detalles-producto">
 
-        <div class="top-section-var">
-            <label for="Opciones" class="opciones">Filtrar</label>
-            <select>
-                <option>Precio</option>
-                <option>Color</option>
-                <option>Cualquier</option>
-            </select>
-        </div>
+                    <div class="img-art">
+                        <input type="checkbox">
+                        <img src="./src/img/pantalon.jpg" alt="">
+                    </div>
+                    <div class="info-productos">
+                         <h2> TITULO DEL PRODUCTO </h2>
+                        
+                        <div class="buttons">
+                            <button class="btn-less"><i class="bi bi-dash"></i></button>
+                     
+                                <span>1</span>
 
-        <div class="cards-container"></div>
+                            <button class="btn-more"><i class="bi bi-plus"></i></button>
+                    
+                        </div>
+                    </div>
+                    <span>$150.000</span>
+                </div> 
+
+            </section>
+
+
+
+            <div class="resumen-compra">
+                <h2>RESUMEN DE LA COMPRA</h2>
+                <div class="productos-cantidad">
+                    <p>PRODUCTOS:1</p>
+                    <span>$150.000</span>
+                </div>
+                <div class="envios">
+                    <p>ENVÍOS:</p>
+                    <span>Precio de envío</span>
+                </div>
+                <div class="total">
+                    <p>TOTAL</p>
+                    <span>$150.000</span>
+                </div>
+
+                <button class="btn-pagar">
+                    FINALIZAR COMPRA
+                </button>
+                
+            </div>
     </section>
 
 
 
-<footer>
-    <div>
+    <footer>
+        <div>
             <h3>Sobre nosotros </h3>
             <ul>
                 <li><a href="">Misión</a></li>
@@ -93,9 +122,8 @@
                 <li><a href="">Google</a></li>
             </ul>
         </div>
-</footer>
+    </footer>
 
-<script src="Script/scriptCategory.js"></script>
-
+    <script src="./Script/script-carrito.js"></script>
 </body>
 </html>

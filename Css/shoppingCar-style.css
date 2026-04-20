@@ -1,6 +1,6 @@
 * {
+    margin:0;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: 'Baloo 2';
 }
@@ -13,7 +13,7 @@ body {
 }
 
 .main-header {
-    background-color: darkslateblue;
+    background-color:darkslateblue;
     color: white;
     position: fixed;
     width: 100%;
@@ -125,98 +125,144 @@ body {
     display: none;
 }
 
-.container-section {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    
-}
-
-.container-details {
-    background-color: #dadada;
+.container-all {
     display: flex;
     margin-top: 20px;
-    margin-bottom: 20px;
+    flex: 1;
     gap: 20px;
     justify-content: space-between;
     padding: 20px;
-    height: 100%;
 }
 
-.img-product-container {
-    width: 50%;
+.carrito-compras {
+    width: 60%;
+    background: #e6e6e6;
     border-radius: 10px;
+    padding: 15px
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    font-size: 20px;
+}
+
+
+
+.detalles-producto {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
-}
-
-.img-product-container:hover {
-    transform: scale(1.02);
-}
-
-.img-product-container img {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    justify-content: space-between;
+    gap: 15px;
     background: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.text-details {
-    width: 50%;
-    text-align: center;
-}
-
-.text-details h2 {
-    font-size: 25px;
-}
-
-#precio {
+.detalles-producto h2 {
     font-size: 20px;
-    font-weight: 700;
-    color: darkslateblue;
+    text-align: left;
 }
 
-#titulo-descripcion {
+.detalles-producto span {
     font-size: 20px;
+    font-weight: 500;
 }
 
-#descripcion {
-    font-size: 20px;
-    font-weight: 200;
+.img-art {
+    width: 100px;
 }
 
-#rating {
-    text-align: center;
-    font-size: 20;
-    font-weight: 600;
+.img-art img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 .buttons {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+    gap: 5px;
+    margin-top: 5px;
 }
 
-.btn-carrito, .btn-comprar {
-    padding: 10px;
-    border-radius: 10px;
-    border: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    color: white;
-    background-color: darkslateblue;
+.buttons button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background: white;
     cursor: pointer;
 }
 
-.btn-carrito:hover, .btn-comprar:hover {
-    background-color: #640591;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+.resumen-compra {
+    background-color: #dddddd;
+    padding: 10px;
+    width: 40%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
+
+.resumen-compra h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(139, 139, 139);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.productos-cantidad {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productos-cantidad p, span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.envios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.envios p,span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total p, span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btn-pagar {
+    background-color: darkslateblue;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-pagar:hover {
+    background-color: #8324ff;
+    transform: scale(1.01);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+}
 
 footer {
     background-color: #000000;
@@ -241,9 +287,7 @@ footer li a {
     
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 768px ) {
     .abrir-menu, .cerrar-menu {
         display: block;
         background: none;      
@@ -256,6 +300,9 @@ footer li a {
 
     }
 
+    .scroll-btn.right, .scroll-btn.left {
+        display: none;
+    }
 
     .nav {
         opacity: 0;
@@ -283,31 +330,19 @@ footer li a {
 
     }
 
-    .container-section {
-        display: block;
 
-    }
-
-    .container-details {
+    .container-all {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        justify-content: space-between;
     }
 
-    .img-product-container,
-    .text-details {
+    .carrito-compras {
         width: 100%;
     }
-    .img-product-container img {
-        width: 80%;
-    }
 
-    .text-details h2 {
-        font-size: 30px;
+    .resumen-compra {
+        width: 100%;
     }
-
-    #descripcion {
-        text-align: justify;
-    }
-  
+    
 }

@@ -299,7 +299,7 @@ footer li a {
         right: 0;
         bottom: 0;
         height: 100vh;
-        background-color: #000000;
+        background-color: darkslateblue;
         box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
     }
 
