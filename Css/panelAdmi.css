@@ -1,0 +1,353 @@
+/* =====================================================
+   RESET GENERAL
+===================================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+:root{
+    --azul-oscuro:#0a1030;
+    --morado:#5c4aa3;
+    --gris-fondo:#e9e9e9;
+    --gris-linea:#cfcfcf;
+    --rojo:#c62828;
+    --blanco:#ffffff;
+    --texto:#111;
+}
+
+/* =====================================================
+   HTML Y BODY
+   Pantalla completa
+===================================================== */
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--gris-fondo);
+    overflow-x:hidden;
+}
+
+/* =====================================================
+   PANEL PRINCIPAL
+   Ahora ocupa toda la pantalla
+===================================================== */
+.panel-admin{
+    width:100%;
+    min-height:100vh;
+    background:var(--gris-fondo);
+}
+
+/* =====================================================
+   HEADER SUPERIOR
+===================================================== */
+.top-header{
+    width:100%;
+    background:var(--azul-oscuro);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 28px;
+    gap:20px;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box img{
+    width:100px;
+    object-fit:contain;
+}
+
+.logo-box h2{
+    color:white;
+    font-size:28px;
+    font-weight:800;
+}
+
+/* =====================================================
+   BUSCADOR HEADER
+===================================================== */
+.search-box{
+    display:flex;
+    align-items:center;
+    width:340px;
+}
+
+.search-box input{
+    width:100%;
+    height:40px;
+    border:none;
+    outline:none;
+    padding:0 12px;
+    border-radius:4px 0 0 4px;
+}
+
+.search-box button{
+    width:48px;
+    height:40px;
+    border:none;
+    background:#ffd600;
+    cursor:pointer;
+    border-radius:0 4px 4px 0;
+}
+
+/* =====================================================
+   ICONOS
+===================================================== */
+.icons-box{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    color:white;
+    font-size:28px;
+    position:relative;
+}
+
+.noti{
+    width:12px;
+    height:12px;
+    background:#ff5722;
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    left:18px;
+}
+
+/* =====================================================
+   BARRA MORADA
+===================================================== */
+.barra-morada{
+    width:100%;
+    height:28px;
+    background:var(--morado);
+}
+
+/* =====================================================
+   MENÚ
+===================================================== */
+.menu-admin{
+    width:100%;
+    background:white;
+    padding:16px 28px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    font-weight:700;
+}
+
+.menu-admin a{
+    color:#111;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.menu-admin a:hover{
+    transform:scale(1.08);
+}
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+.contenido{
+    width:100%;
+    padding:22px 28px;
+}
+
+/* =====================================================
+   CABECERA USUARIOS
+===================================================== */
+.encabezado-usuarios{
+    width:100%;
+    background:white;
+    border-radius:4px;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.encabezado-usuarios h3{
+    font-size:32px;
+    font-weight:900;
+}
+
+.encabezado-usuarios p{
+    font-size:24px;
+    color:#666;
+    font-weight:700;
+}
+
+/* =====================================================
+   BOTÓN AÑADIR
+===================================================== */
+.btn-add{
+    border:none;
+    background:var(--morado);
+    color:white;
+    padding:14px 22px;
+    border-radius:4px;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-add:hover{
+    transform:scale(1.06);
+}
+
+/* =====================================================
+   BUSCADOR USUARIOS
+===================================================== */
+.buscador-usuarios{
+    width:100%;
+    background:white;
+    border-radius:4px;
+    padding:12px 15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+}
+
+.buscador-usuarios input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:15px;
+}
+
+/* =====================================================
+   TABLA
+===================================================== */
+.tabla-usuarios{
+    width:100%;
+    background:white;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+/* =====================================================
+   FILAS
+===================================================== */
+.fila{
+    display:grid;
+    grid-template-columns:1.3fr 2fr 1fr 1fr .6fr .6fr;
+    gap:10px;
+    align-items:center;
+    padding:12px;
+    border-bottom:1px solid var(--gris-linea);
+    font-size:14px;
+}
+
+/* =====================================================
+   ROL
+===================================================== */
+.rol{
+    background:#ececec;
+    padding:7px 10px;
+    text-align:center;
+    border-radius:3px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.rol:hover{
+    transform:scale(1.05);
+}
+
+.admin{
+    background:var(--morado);
+    color:white;
+}
+
+/* =====================================================
+   ESTADO
+===================================================== */
+.estado{
+    padding:7px 10px;
+    text-align:center;
+    border-radius:3px;
+    color:white;
+    font-weight:700;
+    transition:.3s;
+}
+
+.estado:hover{
+    transform:scale(1.05);
+}
+
+.activo{
+    background:var(--morado);
+}
+
+.inactivo{
+    background:var(--rojo);
+}
+
+/* =====================================================
+   BOTONES
+===================================================== */
+.editar,.eliminar{
+    border:none;
+    padding:7px 10px;
+    font-size:12px;
+    cursor:pointer;
+    border-radius:2px;
+    transition:.3s;
+}
+
+.editar{
+    background:#efefef;
+}
+
+.eliminar{
+    background:var(--rojo);
+    color:white;
+}
+
+.editar:hover,
+.eliminar:hover{
+    transform:scale(1.08);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:900px){
+
+    .top-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .encabezado-usuarios{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .fila{
+        grid-template-columns:1fr;
+    }
+
+}

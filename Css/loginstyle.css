@@ -1,0 +1,252 @@
+/* =====================================================
+   RESET GENERAL
+   Elimina espacios por defecto del navegador
+===================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   VARIABLES DE COLORES
+===================================================== */
+:root{
+    --azul-oscuro:#121629;
+    --azul-boton:#1e3a8a;
+    --gris-fondo:#f4f4f4;
+    --gris-borde:#d9d9d9;
+    --texto:#111;
+    --blanco:#ffffff;
+}
+
+/* =====================================================
+   BODY
+   Fondo general de la página
+===================================================== */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--gris-fondo);
+    min-height: 100vh;
+}
+
+/* =====================================================
+   HEADER SUPERIOR
+   Barra azul superior con logo centrado
+===================================================== */
+/* HEADER SUPERIOR */
+.top-header{
+    width: 100%;
+    height: 90px;
+    background: var(--azul-oscuro); 
+    display: flex;
+    justify-content: flex-start;   /* Mueve el contenido a la izquierda */
+    align-items: center;
+    padding-left: 30px;            /* Espacio desde el borde izquierdo */
+}
+
+/* LOGO */
+.top-header img{
+    width: 100%;
+    object-fit: contain;
+}
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   Centra el login en pantalla
+===================================================== */
+.contenedor-login{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 15px 90px;
+}
+
+/* =====================================================
+   TARJETA LOGIN
+   Caja blanca central
+===================================================== */
+.card-login{
+    width: 100%;
+    max-width: 480px;
+    background: var(--blanco);
+    border: 1px solid #b5b5b5;
+    border-radius: 8px;
+    padding: 45px 38px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* =====================================================
+   ICONO USUARIO (creado con pseudo elemento)
+===================================================== */
+.card-login::before{
+    content: "👤";
+    display: block;
+    text-align: center;
+    font-size: 58px;
+    margin-bottom: 12px;
+}
+
+/* =====================================================
+   TITULO
+===================================================== */
+.titulo-login{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--texto);
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Grupo de inputs */
+.grupo-input{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Ocultamos labels para que se vea como imagen */
+.label-login{
+    display: none;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+.input-login{
+    width: 100%;
+    height: 42px;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Al seleccionar */
+.input-login:focus{
+    border-color: var(--azul-boton);
+}
+
+/* =====================================================
+   BOTÓN LOGIN
+===================================================== */
+.grupo-boton{
+    margin-top: 10px;
+}
+
+.btn-login{
+    width: 58%;
+    height: 42px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    background: var(--azul-oscuro);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+.btn-login:hover{
+    transform: scale(1.02);
+}
+
+/* =====================================================
+   TEXTO REGISTRO
+===================================================== */
+.texto-registro{
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* Enlace crear cuenta */
+.link-registro{
+    text-decoration: none;
+    color: var(--azul-boton);
+    font-weight: bold;
+}
+
+.link-registro:hover{
+    text-decoration: underline;
+}
+
+/* =====================================================
+   BOTÓN GOOGLE
+===================================================== */
+.btn-google{
+    width: 100%;
+    height: 44px;
+    margin-top: 28px;
+    border: 1px solid #c9c9c9;
+    border-radius: 12px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+}
+
+/* Hover botón Google */
+.btn-google:hover{
+    background: #f7f7f7;
+}
+
+/* Icono Google */
+.icono-google{
+    width: 18px;
+    height: 18px;
+}
+
+/* =====================================================
+   FRANJA NEGRA INFERIOR
+===================================================== */
+body::after{
+    content: "TODOS LOS DERECHOS RESERVADOS";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:600px){
+
+    .card-login{
+        padding: 35px 22px;
+    }
+
+    .btn-login{
+        width: 100%;
+    }
+
+}

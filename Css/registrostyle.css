@@ -1,0 +1,280 @@
+/* =====================================================
+   RESET GENERAL
+   Elimina márgenes y rellenos por defecto del navegador
+===================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   VARIABLES DE COLORES
+   Facilita reutilizar colores en todo el diseño
+===================================================== */
+:root{
+    --azul-oscuro:#121629;
+    --azul:#1e3a8a;
+    --gris-claro:#f4f4f4;
+    --gris-borde:#d9d9d9;
+    --texto:#111111;
+    --blanco:#ffffff;
+}
+
+/* =====================================================
+   BODY
+   Fondo general y fuente principal
+===================================================== */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--gris-claro);
+    min-height: 100vh;
+}
+
+/* =====================================================
+   HEADER SUPERIOR
+   Barra azul superior con logo centrado
+===================================================== */
+/* HEADER SUPERIOR */
+.top-header{
+    width: 100%;
+    height: 90px;
+    background: var(--azul-oscuro); 
+    display: flex;
+    justify-content: flex-start;   /* Mueve el contenido a la izquierda */
+    align-items: center;
+    padding-left: 30px;            /* Espacio desde el borde izquierdo */
+}
+
+/* LOGO */
+.top-header img{
+    width: 100%;
+    object-fit: contain;
+}
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   Centra la tarjeta del formulario
+===================================================== */
+.contenedor-registro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+/* =====================================================
+   TARJETA DE REGISTRO
+   Caja blanca con bordes redondeados
+===================================================== */
+.card-registro{
+    width: 100%;
+    max-width: 520px;
+    background: var(--blanco);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* =====================================================
+   TITULO PRINCIPAL
+===================================================== */
+.titulo-registro{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--texto);
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   BOTÓN GOOGLE
+===================================================== */
+.btn-google{
+    width: 100%;
+    height: 52px;
+    border: 1px solid var(--gris-borde);
+    background: var(--blanco);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover botón Google */
+.btn-google:hover{
+    background: #f7f7f7;
+}
+
+/* Icono de Google */
+.icono-google{
+    width: 22px;
+    height: 22px;
+}
+
+/* =====================================================
+   TEXTO EMAIL
+===================================================== */
+.texto-email{
+    text-align: center;
+    margin: 22px 0 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+.formulario-registro{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* =====================================================
+   INPUTS GENERALES
+===================================================== */
+.input-registro{
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efecto al escribir */
+.input-registro:focus{
+    border-color: var(--azul);
+}
+
+/* =====================================================
+   GRUPO DOBLE
+   Dirección y teléfono en una fila
+===================================================== */
+.grupo-doble{
+    display: flex;
+    gap: 12px;
+}
+
+/* Dirección más ancha */
+.direccion{
+    flex: 2;
+}
+
+/* Teléfono más pequeño */
+.telefono{
+    flex: 1;
+}
+
+/* =====================================================
+   CHECKBOX Y TERMINOS
+===================================================== */
+.grupo-check{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.check-terminos{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.label-check{
+    font-size: 14px;
+    color: #444;
+}
+
+/* =====================================================
+   TEXTO POLÍTICAS
+===================================================== */
+.texto-politicas{
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: -4px;
+}
+
+/* =====================================================
+   BOTÓN CREAR CUENTA
+===================================================== */
+.btn-crear-cuenta{
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+/* Hover botón */
+.btn-crear-cuenta:hover{
+    background: #0d1325;
+}
+
+/* =====================================================
+   SEPARADOR
+===================================================== */
+.separador{
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* =====================================================
+   LINK LOGIN
+===================================================== */
+.texto-login{
+    text-align: center;
+}
+
+.link-login{
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.link-login:hover{
+    text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVE 
+===================================================== */
+@media(max-width:600px){
+
+    .card-registro{
+        padding: 25px 20px;
+    }
+
+    .titulo-registro{
+        font-size: 20px;
+    }
+
+    .grupo-doble{
+        flex-direction: column;
+    }
+
+    .grupo-doble input {
+        padding: 15px;
+    }
+}

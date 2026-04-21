@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de usuario</title>
+    <link rel="stylesheet" href="./css/loginstyle.css">
+</head>
+<body>
+    <header class="top-header">
+        
+        <div>
+            <a href="index.html"><img src="./src/img/logo.png" alt=""></a>
+        </div>
+    </header>
+
+    <main class="contenedor-login">
+
+        <section class="card-login">
+
+            <h2 class="titulo-login">Iniciar Sesión</h2>
+
+            <form class="formulario-login" action="#" method="post">
+
+                <div class="grupo-input">
+                    <label class="label-login" for="email">
+                        Correo electrónico
+                    </label>
+                    <input 
+                        class="input-login"
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                    >
+                </div>
+
+                <div class="grupo-input">
+                    <label class="label-login" for="password">
+                        Contraseña
+                    </label>
+                    <input 
+                        class="input-login"
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                    >
+                </div>
+
+                <div class="grupo-boton">
+                    <button class="btn-login" type="submit">
+                        Ingresar
+                    </button>
+                </div>
+
+            </form>
+
+            <p class="texto-registro">
+                ¿No tienes cuenta?
+                <a class="link-registro" href="registro.html">
+                    Regístrate aquí
+                </a>
+            </p>
+
+            <!-- Botón Google -->
+            <button class="btn-google" type="button">
+                <img 
+                    class="icono-google"
+                    src="./src/img/google.png" 
+                    alt="Google"
+                >
+                Iniciar con Google
+            </button>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="./css/registrostyle.css">
+</head>
+<body>
+    <header class="top-header">
+        
+        <div>
+            <a href="index.html"><img src="./src/img/logo.png" alt=""></a></div>
+    </header>
+
+    <main class="contenedor-registro">
+
+        <section class="card-registro">
+
+            <h2 class="titulo-registro">
+                CREA TU CUENTA Y REALIZA <br>
+                TUS COMPRAS AHORA MISMO
+            </h2>
+
+            <div class="form-box">
+
+                <!-- Botón Google -->
+                <button class="btn-google" type="button">
+                    <img 
+                        class="icono-google"
+                        src="./src/img/google.png" 
+                        alt="Google"
+                    >
+                    Registrarse con Google
+                </button>
+
+                <p class="texto-email">
+                    O ingresa tu e-mail
+                </p>
+
+                <!-- Formulario -->
+                <form class="formulario-registro">
+
+                    <input 
+                        class="input-registro"
+                        type="email" 
+                        placeholder="ejemplo@correo.com" 
+                        required
+                    >
+
+                    <input 
+                        class="input-registro"
+                        type="text" 
+                        placeholder="Username" 
+                        required
+                    >
+
+                    <input 
+                        class="input-registro"
+                        type="password" 
+                        placeholder="Contraseña" 
+                        required
+                    >
+
+                    <input 
+                        class="input-registro"
+                        type="text" 
+                        placeholder="Nombre" 
+                        required
+                    >
+
+                    <input 
+                        class="input-registro"
+                        type="text" 
+                        placeholder="Apellido" 
+                        required
+                    >
+
+                    <div class="grupo-doble">
+
+                        <input 
+                            class="input-registro direccion"
+                            type="text" 
+                            placeholder="Dirección"
+                        >
+
+                        <input 
+                            class="input-registro telefono"
+                            type="text" 
+                            placeholder="+57"
+                        >
+
+                    </div>
+
+                    <div class="grupo-check">
+
+                        <input 
+                            class="check-terminos"
+                            type="checkbox" 
+                            required
+                        >
+
+                        <label class="label-check">
+                            Acepto términos y condiciones
+                        </label>
+
+                    </div>
+
+                    <p class="texto-politicas">
+                        Al continuar, autorizo el uso de mis datos de acuerdo
+                        a la Declaración de privacidad y acepto los términos
+                        y condiciones.
+                    </p>
+
+                    <button class="btn-crear-cuenta" type="submit">
+                        Crear Cuenta
+                    </button>
+
+                    <p class="separador">ó</p>
+
+                    <p class="texto-login">
+                        <a class="link-login" href="login.html">
+                            Iniciar Sesión
+                        </a>
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

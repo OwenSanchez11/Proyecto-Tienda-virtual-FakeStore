@@ -13,7 +13,7 @@ body {
 }
 
 .main-header {
-    background-color:darkslateblue;
+    background-color:#12162D;
     color: white;
     position: fixed;
     width: 100%;
@@ -125,9 +125,22 @@ body {
     display: none;
 }
 
-.container-all {
+.container-cabecera {
     display: flex;
-    margin-top: 20px;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.container-cabecera a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-all {
+    display: flex;;
     flex: 1;
     gap: 20px;
     justify-content: space-between;
@@ -138,7 +151,8 @@ body {
     width: 60%;
     background: #e6e6e6;
     border-radius: 10px;
-    padding: 15px
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
 }
 
 .title {
@@ -162,6 +176,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
 }
 
 .detalles-producto h2 {
@@ -203,8 +218,10 @@ body {
     padding: 10px;
     width: 40%;
     height: 200px;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
 }
 
 

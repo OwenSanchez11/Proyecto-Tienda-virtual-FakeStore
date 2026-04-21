@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Administración</title>
+<link rel="stylesheet" href="./css/panelAdmi.css">
+</head>
+
+<body>
+
+<!-- CONTENEDOR GENERAL -->
+<div class="panel-admin">
+
+    <!-- HEADER SUPERIOR -->
+    <header class="top-header">
+
+        <!-- Logo + título -->
+        <div class="logo-box">
+            <a href="index.html"><img src="./src/img/logo.png" alt="Logo"></a>
+            <h2>Panel de Administración</h2>
+        </div>
+
+       
+        <!-- Iconos -->
+        <div class="icons-box">
+            <span> <img src="./src/images/notificasion.png" alt=""></span>
+            <span><img src="./src/images/carrito.png" alt=""></span>
+            <span><img src="./src/images/usuario.png" alt=""></span>
+        </div>
+
+    </header>
+
+
+
+    <!-- MENÚ -->
+    <nav class="menu-admin">
+        <a href="#">Inicio</a>
+        <span>/</span>
+
+        <a href="administration-panel.html">Gestión de Productos</a>
+        <span>/</span>
+
+        <a href="#">Gestión de usuario</a>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main class="contenido">
+
+        <!-- CABECERA -->
+        <section class="encabezado-usuarios">
+
+            <div>
+                <h3>Gestión de Usuarios</h3>
+                <p>Administra los usuarios de la plataforma</p>
+            </div>
+
+            <button class="btn-add">
+                + Añadir Usuario
+            </button>
+
+        </section>
+
+        <!-- BUSCADOR -->
+        <section class="buscador-usuarios">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar usuario por nombre o por email...">
+        </section>
+
+        <!-- TABLA -->
+        <section class="tabla-usuarios">
+
+            <div class="fila">
+                <span>Valentina Rojas</span>
+                <span>valentina.rojas21@gmail.com</span>
+                <span class="rol admin">Administrador</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Andrés Mendoza</span>
+                <span>andres.mendoza84@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Camila Torres</span>
+                <span>camila.torres.dev@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Sebastián Castillo</span>
+                <span>sebastian.castillo07@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Daniela Prado</span>
+                <span>daniela.prado.tech@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Jenifer Camacho</span>
+                <span>jenifer.camacho.tech@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado inactivo">INACTIVO</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Owen Sanchez</span>
+                <span>owen.tech@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="fila">
+                <span>Jair Joven</span>
+                <span>jair.loven25@gmail.com</span>
+                <span class="rol">Usuario</span>
+                <span class="estado activo">Activo</span>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -13,7 +13,7 @@ body {
 }
 
 .main-header {
-    background-color: darkslateblue;
+    background-color: #12162D;
     color: white;
     position: fixed;
     width: 100%;
@@ -133,7 +133,7 @@ body {
 }
 
 .container-details {
-    background-color: #dadada;
+    background-color: #ffffff;
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -303,7 +303,7 @@ footer li a {
     }
 
     .text-details h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #descripcion {
