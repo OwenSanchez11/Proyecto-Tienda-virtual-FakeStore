@@ -110,10 +110,8 @@ body {
     transition: transform 0.3s ease;
 }
 
-.cerrar-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.abrir-menu,.cerrar-menu {
+    display: none;
 }
 
 .right-icons {
@@ -203,7 +201,7 @@ h1 { font-size: 24px; margin-bottom: 20px; }
     border-radius: 8px;
 }
 
-.product-image { width: 100%; height: 100%; object-fit: cover; }
+.product-image { width: 100%; height: 100%;object-fit: cover; }
 
 .product-details { flex-grow: 1; } /* Hace que los textos ocupen el resto del espacio */
 .product-title { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
@@ -284,4 +282,40 @@ h1 { font-size: 24px; margin-bottom: 20px; }
     position: absolute;
     top: -2px;
     left: 3px;
+}
+
+/* Media query para adaptar a las pantallas pequeñas a partir de los 768px */
+@media (max-width: 768px) {
+
+    .abrir-menu, .cerrar-menu {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /*Cambio la dirección a columnas para que se vean mejor y no se se sobreponga ningún elemento*/
+    .filter-bar {
+        gap: 10px;
+        flex-direction: column;
+    }
+    /*aquí alineo todo al centro y nuevamente lo direcciono en columnas*/
+    .card-body {
+        justify-content: center;
+        flex-direction: column;
+    }
+    /*Hago que ocupe todo el espacio que tiene*/
+    .product-image-container {
+        width: 100%;
+        border: none;
+    }
+    /*Lo cambio de object-fit cover a contain para que se vea completa la imagen 
+    ya que con cover disminuría mucho el tamaño de la imagen*/
+    .product-image-container img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    
 }

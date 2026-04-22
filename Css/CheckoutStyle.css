@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #e0e0e0; 
+}
+
+/* Header Negro */
+/* 1. El contenedor padre: El que separa las 3 partes */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Empuja logo a la izq y acciones a la der */
+    align-items: center;           /* Centra todo verticalmente */
+    background-color: #1a1a2e;     /* Color oscuro de tu captura */
+    padding: 10px 40px;            /* Espacio a los lados para que no toquen el borde */
+}
+
+/* 2. El Logo: Asegúrate de que no sea gigante */
+.logo img {
+    height: 45px; /* Ajusta según el tamaño de tu logo.png */
+    display: block;
+}
+
+
+/* 4. Iconos de la derecha: Todos en fila */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;       /* Espacio exacto entre campana, carrito y usuario */
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.user-actions a {
+    text-decoration: none;
+}
+
+.user-actions i {
+    color: white;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.user-actions i {
+    font-size: 30px; 
+}
+
+
+.logo img {
+    height: 100px; /* Sube o baja este número hasta que se vea como quieres */
+    width: auto;  /* Esto hace que el ancho se ajuste solo para no verse estirado */
+    display: block; 
+}
+/* Nav Morada */
+.sub-nav {
+    background-color: #4B3F80;
+    color: white;
+    padding: 20px 0;
+}
+
+.sub-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Tarjeta de Confirmación */
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.confirmation-card {
+    background-color: #DDE8F0; /* Fondo celeste claro */
+    border: 2px solid #3B82F6; /* Borde azul */
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.success-message h1 {
+    color: #4CAF50;
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.check-circle {
+    background-color: #4CAF50;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.divider {
+    border: 0.5px solid #ccc;
+    margin: 30px 0;
+}
+
+.order-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.separator { color: #999; }
+
+/* Tabla de Producto */
+.product-table-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.header-right {
+    display: flex;
+    gap: 80px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-detail img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.product-values {
+    display: flex;
+    gap: 100px;
+    font-weight: bold;
+}
+
+.total-section {
+    text-align: right;
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+/* Botón Final */
+.btn-home {
+    background-color: #5D5092;
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-home:hover {
+    background-color: #4B3F80;
+}
