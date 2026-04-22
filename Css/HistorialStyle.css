@@ -1,0 +1,287 @@
+:root {
+    --bg-main: #dcdde2;          /* Color de fondo de la página */
+    --dark-blue: #0a042e;        /* Azul oscuro para el encabezado */
+    --franja-intermedia: #5b5091;/* Color decorativo de la barra secundaria */
+    --accent-blue: #1C38C9;      /* Azul para elementos de énfasis como checkboxes */
+    --purple-main: #6B57AE;      /* Morado principal para botones */
+    --purple-light: #8E79D8;     /* Morado claro para variaciones de botones */
+    --border-color: #272727;     /* Color estándar para bordes de tarjetas y botones */
+    --text-black: #000000;       /* Color de texto principal */
+}
+
+* {
+    /* Reset básico: quita márgenes y paddings por defecto de todos los navegadores */
+    box-sizing: border-box;      /* Asegura que el padding no afecte el ancho total del elemento */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Configuración de la fuente global y color de fondo de la ventana */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-black);
+}
+
+.main-header {
+    background-color:#12162D;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo img {
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color:rgb(255, 0, 0);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+
+.nav-links li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.top-bar .logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.cerrar-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-icons img {
+    width: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.right-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+    /* Centra el contenido de la página y limita su ancho */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 { font-size: 24px; margin-bottom: 20px; }
+
+.filter-bar {
+    /* Barra blanca donde están los filtros de búsqueda internos */
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.search-filter input {
+    /* Input específico dentro de la barra de filtros */
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 250px;
+}
+
+.filters-right { display: flex; gap: 20px; font-weight: bold; font-size: 14px; }
+
+/* --- TARJETAS DE PRODUCTO --- */
+.date-section { margin-bottom: 40px; }
+.date-title { font-size: 22px; margin-bottom: 15px; }
+
+.purchase-card {
+    /* Contenedor principal de cada pedido/producto */
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;         /* Evita que los hijos sobresalgan de las esquinas redondeadas */
+}
+
+.card-header {
+    /* Parte superior de la tarjeta (ej: nombre del vendedor o ID) */
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.card-body {
+    /* Sección donde se muestra la foto y los detalles */
+    padding: 35px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.product-image-container {
+    /* Marco para la imagen del producto */
+    width: 130px;
+    height: 130px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.product-image { width: 100%; height: 100%; object-fit: cover; }
+
+.product-details { flex-grow: 1; } /* Hace que los textos ocupen el resto del espacio */
+.product-title { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+.product-info { color: #070707; margin-bottom: 10px; }
+
+.title-row { display: flex; justify-content: space-between; }
+.delete-btn { background: none; border: none; cursor: pointer; font-size: 18px; }
+
+.quantity-control {
+    /* Selector de cantidad (+ 1 -) */
+    display: flex;
+    border: 1px solid var(--border-color);
+    width: fit-content;
+    border-radius: 4px;
+}
+.quantity-control button, .quantity-control span {
+    padding: 2px 10px;
+    border: none;
+    background: none;
+}
+
+.order-actions { 
+    /* Columna de botones a la derecha (Comprar, ver más, etc) */
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.btn {
+    /* Estilo base para todos los botones redondeados */
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    min-width: 140px;
+}
+.btn-purple { background-color: var(--purple-main); }
+.btn-light-purple { background-color: var(--purple-light); }
+
+.card-footer {
+    /* Parte inferior de la tarjeta donde suele ir el precio total */
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+/* --- CHECKBOX PERSONALIZADO --- */
+.custom-checkbox { 
+    /* Contenedor del checkbox falso para que sea más bonito */
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+}
+.checkmark {
+    /* El recuadro del checkbox que nosotros dibujamos */
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--accent-blue);
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+}
+.custom-checkbox input { display: none; } /* Oculta el checkbox feo por defecto de Windows/Mac */
+
+.custom-checkbox input:checked + .checkmark { 
+    /* Cambia el color del recuadro cuando está seleccionado */
+    background: var(--accent-blue); 
+}
+.custom-checkbox input:checked + .checkmark::after {
+    /* Dibuja la marca de "visto" o check (✓) cuando se hace click */
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}

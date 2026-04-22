@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Compras - SEAL HOUSE</title>
+    <link rel="stylesheet" href="./Css/HistorialStyle.css">
+</head>
+<body>
+
+    <header class="main-header">
+        
+        <div class="top-bar">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="src/img/logo.png" alt="logo">
+                </a>
+            </div>
+
+            
+            <nav class="nav" id="nav">
+                    <ul class="nav-links">
+                        <li><a href="category.html?cat=men's clothing">CABALLEROS</a></li>
+                        <li><a href="category.html?cat=women's clothing">DAMAS</a></li>
+                        <li><a href="category.html?cat=electronics">TECNOLOGÍA</a></li>
+                        <li><a href="category.html?cat=jewelery">JEWELERY</a></li>
+                    </ul>
+            </nav>
+
+            <div class="right-icons">
+
+                <a href="./shopping-car.html">
+                    <img src="src/img/carrito.png" alt="">
+                </a>
+
+                <a href="login.html">
+                    <img src="src/img/user.png" alt="">
+                </a>
+                
+            </div>
+
+
+        </div>
+
+    </header>
+ 
+<main>
+    <h1>Historial de Compras</h1>
+
+    <div class="filter-bar">
+        <div class="search-filter">
+            <input type="text" placeholder="BUSCAR POR COMPRA">
+        </div>
+        <div class="filters-right">
+            <span class="filter-label">FILTRAR:</span>
+            <div class="filter-dropdown">CATEGORÍA ▾</div>
+            <div class="filter-dropdown">FECHA ▾</div>
+        </div>
+    </div>
+
+    <section class="date-section">
+        <h2 class="date-title">HOY</h2>
+        <div class="purchase-card">
+            <div class="card-header">
+                <label class="custom-checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+                PRODUCTOS DE ESTA TIENDA
+            </div>
+            <div class="card-body">
+                <label class="custom-checkbox side-check">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <div class="product-image-container">
+                    <img src="./src/img/image.png" alt="Buzo" class="product-image" onerror="this.src='https://via.placeholder.com/150';">
+                </div>
+                <div class="product-details">
+                    <p class="product-title">BUZO DE CUELLO REDONDO GRIS</p>
+                    <p class="product-title">TALLA: L</p>
+                    <div class="quantity-control"> <strong>
+                        <button>+</button>
+                        <span>2</span>
+                        <button>-</button> </strong>
+                    </div>
+                </div>
+                <div class="order-actions">
+                    <button class="btn btn-purple">VER COMPRA</button>
+                    <button class="btn btn-light-purple">VOLVER A COMPRAR</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="shipping-info"><strong>ENVÍO GRATIS:</strong></div>
+                <div class="price-info">
+                   <strong> PRECIO PRODUCTO: $50.000</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="date-section">
+        <h2 class="date-title">28 ENERO</h2>
+        <div class="purchase-card">
+            <div class="card-header">
+                <label class="custom-checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+                PRODUCTOS DE ESTA TIENDA
+            </div>
+            <div class="card-body">
+                <label class="custom-checkbox side-check">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <div class="product-image-container">
+                    <img src="./src/img/Boss.png" alt="Zapatos" class="product-image" onerror="this.src='https://via.placeholder.com/150';">
+                </div>
+                <div class="product-details">
+                    <div class="title-row">
+                        <p class="product-title">ZAPATOS HUGO BOSS ULTIMA EDICION</p>
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+                    <p class="product-info"><strong>TALLA: 39</strong></p>
+                    <div class="quantity-control"> <strong>
+                        <button>+</button>
+                        <span>1</span>
+                        <button>-</button> </strong>
+                    </div>
+                </div>
+                <div class="order-actions">
+                    <button class="btn btn-purple">VER COMPRA</button>
+                    <button class="btn btn-light-purple">VOLVER A COMPRAR</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="shipping-info"><strong>ENVÍO GRATIS:</strong></div>
+                <div class="price-info">
+                  <strong>  PRECIO PRODUCTO: $250.000</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
