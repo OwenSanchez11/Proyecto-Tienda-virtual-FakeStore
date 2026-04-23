@@ -24,7 +24,7 @@ body {
 }
 
 .main-header {
-    background-color:#12162D;
+    background: linear-gradient(90deg, #12162D, #1e2550);
     color: white;
     position: fixed;
     width: 100%;

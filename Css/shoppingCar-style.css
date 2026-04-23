@@ -13,7 +13,7 @@ body {
 }
 
 .main-header {
-    background-color:#12162D;
+    background: linear-gradient(90deg, #12162D, #1e2550);
     color: white;
     position: fixed;
     width: 100%;
@@ -282,26 +282,21 @@ body {
 }
 
 footer {
-    background-color: #000000;
+    background: #12162D;
     color: white;
-    text-align: center;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
-    padding: 10px;
+    flex-wrap: wrap;
 }
 
-
-
-footer ul li{
+footer ul li {
     list-style: none;
-    
 }
 
-footer li a {
+footer a {
     text-decoration: none;
     color: white;
-    
 }
 
 @media (max-width: 768px ) {

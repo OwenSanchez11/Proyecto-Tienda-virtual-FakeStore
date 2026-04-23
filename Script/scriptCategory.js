@@ -30,27 +30,27 @@ const grupo = params.get('cat');
 
 const banners = {
     "men's clothing": {
-        img: "src/img/men's clothing.jpg",
+        img: "../src/img/men's clothing.jpg",
         titulo: "Moda para hombres",
         descripcion: "Lo mejor para caballeros"
     },
     "women's clothing": {
-        img: "src/img/banner-women.jpg",
+        img: "../src/img/banner-women.jpg",
         titulo: "Moda para Damas",
         descripcion: "Lo mejor en ropa de Damas"
     },
     electronics: {
-        img: "src/img/tecnología.jpg",
+        img: "../src/img/tecnología.jpg",
         titulo: "Tecnología",
         descripcion: "Lo último en tecnología"
     },
     jewelery: {
-        img: "src/img/joyeria.jpg",
+        img: "../src/img/joyeria.jpg",
         titulo: "Jewerely",
         descripcion: "Nuestras mejores prendas y joyería"
     },
     default: {
-        img: "src/img/banner.png",
+        img: "../src/img/banner.png",
         titulo: "Todos los productos",
         descripcion: "Explora nuestro catálogo"
     }
@@ -120,5 +120,5 @@ document.addEventListener('click', (e) => {
 
     if(!id) return;
 
-    window.location.href =`producto.html?id=${id}`;
+    window.location.href =`./producto.html?id=${id}`;
 });

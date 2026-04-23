@@ -85,7 +85,7 @@ document.addEventListener('click', (e) => {
 
     if(action === 'ver-producto') {
         const id = element.dataset.id;
-        window.location.href =`producto.html?id=${id}`;
+        window.location.href =`Pages/producto.html?id=${id}`;
     }
 
 })

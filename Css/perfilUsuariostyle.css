@@ -1,6 +1,6 @@
 /*perfil de usuario*/
 :root {
-    --dark-blue: #121420;
+    --dark-blue: linear-gradient(90deg, #12162D, #1e2550);
     --purple: #5d4a8e;
     --light-bg: #e0e0e0;
     --white: #ffffff;
@@ -15,13 +15,14 @@ body {
 
 /* Header Superior */
 .top-header {
-    background-color: var(--dark-blue);
+    background: var(--dark-blue);
     color: white;
     padding: 10px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 
 .search-bar {
     display: flex;

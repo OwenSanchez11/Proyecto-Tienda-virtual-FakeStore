@@ -13,7 +13,7 @@
    Facilita reutilizar colores en todo el diseño
 ===================================================== */
 :root{
-    --azul-oscuro:#121629;
+    --azul-oscuro: linear-gradient(90deg, #12162D, #1e2550);
     --azul:#1e3a8a;
     --gris-claro:#f4f4f4;
     --gris-borde:#d9d9d9;

@@ -1,8 +1,8 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2', sans-serif;
 }
 
 body {
@@ -10,10 +10,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #f5f7fb;
 }
 
 .main-header {
-    background-color:#12162D;
+    background: linear-gradient(90deg, #12162D, #1e2550);
     color: white;
     position: fixed;
     width: 100%;
@@ -127,16 +128,15 @@ body {
 
 
 .header-container {
-    display: flex;
-    gap: 20px;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    height: 250px;
+    overflow: hidden;
 }
 
 .header-banner img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 .header-banner {
@@ -145,13 +145,12 @@ body {
 }
 
 .overlay {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0);
-    transition: background 0.3s ease;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
 }
 
 .header-banner:hover .overlay{
@@ -163,9 +162,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
-    width: 90%;
-    max-width: 800px; 
 }
 
 .text-header h1 {
@@ -179,11 +177,14 @@ body {
 }
 
 .top-section-var {
-    border: 1px solid #000000;
-    color: darkslateblue;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.grid-cards {
+    padding: 40px 20px;
 }
 
 .opciones {
@@ -194,26 +195,21 @@ body {
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 20px;
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
-    padding: 10px;
-    min-width: 250px;
-    border-radius: 10px;
-    margin: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
     background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-    box-shadow: rgba(0,0,0,0.2);
-    transform: scale(1.02);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card-footer {
@@ -227,49 +223,67 @@ body {
     color: darkslateblue;
 }
 
+.card-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
 .card img {
-    width: 100%;
-    height: 150px;
+    max-height: 150px;
     object-fit: contain;
 }
 
+.card-footer {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-footer h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-footer p {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkslateblue;
+}
+
 .card-footer button {
-    width: 70%;
-    background-color: darkslateblue;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: darkslateblue;
     color: white;
-    font-size: 12px;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .card-footer button:hover {
-    background-color: #3b274d;
+    background: #640591;
 }
 
 footer {
-    background-color: #000000;
+    background: #12162D;
     color: white;
-    text-align: center;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
-    padding: 10px;
-    margin-top: auto;
+    flex-wrap: wrap;
 }
 
-
-
-footer ul li{
+footer ul li {
     list-style: none;
-    
 }
 
-footer li a {
+footer a {
     text-decoration: none;
     color: white;
-    
 }
 
 
