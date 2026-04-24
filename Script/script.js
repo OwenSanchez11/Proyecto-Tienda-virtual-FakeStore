@@ -1,3 +1,5 @@
+//aquí utilizo un event listener en el html que detecta cuando se presionan en los botones  
+//del modo mobile, tanto el menú hamburguesa como el de cerrar 
 document.addEventListener('click', (e) => {
     const nav = document.getElementById('nav');
 
@@ -10,7 +12,8 @@ document.addEventListener('click', (e) => {
     }
 })
 
-
+//esta es la función que utilizo yo para darle ese movimiento al contenedor slider de las cards
+//que junto los botones harán ese movimiento
 const sliders = document.querySelectorAll('.slider');
 
 sliders.forEach(slider => {

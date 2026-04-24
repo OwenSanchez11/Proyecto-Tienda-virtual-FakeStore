@@ -10,9 +10,10 @@
 </head>
 <body>
 
-    <!-- etiqueta header para la navbar con class "main-header"-->
+    <!-- etiqueta header para la barra de navegación con class "main-header para referirme a ella"-->
     <header class="main-header">
         
+        <!-- este div es para el logo que lo metí dentro de otro div y una etiqueta a para hacerlo redirigible-->
         <div class="top-bar">
             <div class="logo">
                 <a href="./index.html">
@@ -20,10 +21,13 @@
                 </a>
             </div>
 
-            
+            <!-- la nav, utilicé una lista para colocar los titulos de cada sección dentro de una etiqueta a -->
             <nav class="nav" id="nav">
                     <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
                     <ul class="nav-links">
+                        <!-- el link que coloqué debería capturar lo que está después del 'cat'
+                        para que el script que tengo atrape la categoria y me redirija a su propia pagina 
+                        -->
                         <li><a href="Pages/category.html?cat=men's clothing">CABALLEROS</a></li>
                         <li><a href="Pages/category.html?cat=women's clothing">DAMAS</a></li>
                         <li><a href="Pages/category.html?cat=electronics">TECNOLOGÍA</a></li>
@@ -31,6 +35,8 @@
                     </ul>
             </nav>
 
+
+            <!-- iconos de la derecha como el user y el carrito de la barra de navegación -->
             <div class="right-icons">
                 <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
 
@@ -49,7 +55,7 @@
 
     </header>
 
-    
+    <!-- en este div coloqué tanto la imagen como el titulo del banner inicial de la pagina -->
         <div class="header-container">
             <div class="banner">
                 <img src="src/img/banner.png" alt="">
@@ -62,9 +68,10 @@
             </div>
         </div>
 
-
+    <!-- este section es en donde coloqué todas las tarjetas dedicadas 
+    a las categorias  -->
     <section class="categorias-container">
-
+        <!-- titulo antes de las categorías -->
         <div class="texto">
             <div class="left-text">
                  <h2>Explora nuestras cateogorías</h2>
@@ -76,7 +83,7 @@
            </div>
         </div>
     
-
+        <!-- aquí hice las cards con titulos diferentes para luego darle estilos diferentes -->
         <div class="cards-categoria-container">
 
                 <a class="medium-card" href="pages/category.html?cat=jewelery">
@@ -115,21 +122,28 @@
 
     </section>
 
+    <!-- esta es la sección de las cards que hice para mostrar los productos -->
     <section class="novedades-container">
 
             <h2 class="title-novedades">Productos destacados</h2>
         
             <div class="slider">
+                <!-- botones para poder mover las cards como un "slider" hacía la izquierda luego con JS -->
                 <button class="scroll-btn left scroll-left">◀</button>
-
+                <!-- este es como tal el contenedor de las cards, las cards las genero con JS llamando a la API
+                para que se pinten en dicho contenedor 
+                -->
                 <div class="novedades-card-container"></div>
-
+                <!-- este es el botón para mover las cards hacía la derecha -->
                 <button class="scroll-btn right scroll-right">▶</button>
 
             </div>
 
     </section>
 
+    <!-- en esta section realicé el mismo procedimiento para las cards
+    hago el "contenedor" y luego con JS genero la cards 
+    -->
     <section class="container-section">
 
         
@@ -138,6 +152,9 @@
         
             <div class="slider">
                 <button class="scroll-btn left scroll-left">◀</button>
+                <!-- este es el contenedor de las cards, también tiene los mismos botones de izquierda y derecha 
+                y la misma clase slider el contenedor anterior para poder aplcar ese movimiento 
+                -->
                 <div class="novedades-card-container">
 
                 </div>
@@ -148,16 +165,20 @@
     </section>
 
 
+    <!-- este contenedor es para la ultima sección de la pagina que mostrará también productos
+    y renderizará las cards con el Javascript 
+    -->
     <section class="grid-container">
 
         <div class="text-title">
             <p>Nuestros mejores productos</p>
             <h2>Tecnología</h2>
         </div>
-
+        <!-- contenedor donde se generarán las cards -->
     <div class="grid-cards-container"></div>
     </section>
 
+    <!-- footer de la pagina -->
     <footer>
         <div>
             <h3>Sobre nosotros </h3>
@@ -178,6 +199,7 @@
         </div>
     </footer>
 
+    <!-- estos son los scripts enlazados con mi index para generar las cards y darle esa funcionalidad a los botones -->
     <script src="Script/script.js"></script>
     <script src="Script/api.js"></script>
 </body>

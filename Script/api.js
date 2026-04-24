@@ -1,3 +1,4 @@
+//uso este fetch para llamar a la api y que me traiga los datos de los productos de la API
 const obtenerDatos = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();

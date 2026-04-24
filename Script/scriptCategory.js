@@ -1,3 +1,4 @@
+//función en el que utilizo fetch para que me devuelva los productos de la API
 async function obtenerProductosPorCategoria(categoria) {
     const res = await fetch(`https://fakestoreapi.com/products/category/${categoria}`);
     const productos = await res.json();
@@ -20,14 +21,15 @@ document.addEventListener('click', (e) => {
     }
 })
 
-//renderizado de la página entera
+//renderizado de la página entera según cada categoria
 const contenedor = document.querySelector('.cards-container');
 const titulo = document.querySelector('.titulo-categoria');
 
 const params = new URLSearchParams(window.location.search);
 const grupo = params.get('cat');
 
-
+//guardo los objetos en una variable banners para que guarden tanto el titulo, la imagen y la descripción que saldrá
+//según la categoria que elijan
 const banners = {
     "men's clothing": {
         img: "../src/img/men's clothing.jpg",
@@ -57,9 +59,15 @@ const banners = {
 
 }
 
+//función que elije el banner que se colocará
 const cambioBanner = (grupo) => {
+
+    //Busca en el objeto "banners" usando la clave "grupo"
+    //Si NO existe esa categoría, usa "banners.default"
     const data = banners[grupo] || banners.default;
 
+    // Cambia la imagen del banner dinámicamente
+    // data.img viene del objeto banners
     const bannerImg = document.querySelector('.header-banner img');
     bannerImg.src = data.img;
     document.querySelector('.titulo-categoria').textContent = data.titulo;
@@ -67,7 +75,7 @@ const cambioBanner = (grupo) => {
     document.title = `${data.titulo}`;
 }
 
-
+//función que se utiliza para renderizar las cards dentro de la pagina de categorias
 function renderProductos(productos) {
     contenedor.innerHTML = "";
 
@@ -91,7 +99,8 @@ function renderProductos(productos) {
     });
 }
 
-
+//función que muestra y obtiene todos los productos de cada categoria e inicia todo lo demás
+//tanto el cambio de banner como la renderización de los productos
 async function init() {
     let productos=[];
 
@@ -109,8 +118,8 @@ async function init() {
 
 init();
 
-//obtener id
 
+//obtener id
 document.addEventListener('click', (e) => {
     const card = e.target.closest('.card');
 

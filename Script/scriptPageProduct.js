@@ -1,3 +1,4 @@
+//funcion para el menu hamburguesa y botón de cerrar
 document.addEventListener('click', (e) => {
     const nav = document.getElementById('nav');
 
@@ -18,10 +19,14 @@ const obtenerId = async (id) => {
     return data;
 }
 
+//traemos el contenedor y la id del html 
 const contenedor = document.querySelector('.container-details');
+//URLSearchParams sirve para leer los parametros de la URL que se le proporcionará
 const params  = new URLSearchParams(window.location.search);
+//en este caso, obtendremos el id del producto que traiga de la API para que lo muestre en la pagina
 const id = params.get('id');
 
+//renderizamos todo el contenido de la pagina
 function renderProducto(data) {
     document.title = data.title;
     contenedor.innerHTML = "";
@@ -49,7 +54,8 @@ function renderProducto(data) {
 
 }
 
-// 5. Ejecutar todo
+// utilizamos un condicional para saber si obtiene una ID, y si le llega la ID entonces se ejecuta la función de renderProducto para que renderice 
+//lo que le llegó de la id, sino que muestre un console.log explicando lo que falló
 if (id) {
     obtenerId(id).then(data => {
         renderProducto(data);
