@@ -2,7 +2,8 @@ import {
   actualizarCantidad, 
   actualizarSeleccion, 
   agregarAlCarrito,
-  seleccionarTodos 
+  seleccionarTodos,
+  obtenerCatalogo
 } from './carritoLogic.js';
 import { obtenerCarrito } from './carritoStorage.js';
 
@@ -32,7 +33,7 @@ export function initEventosCarrito() {
 
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", async (e) => {
 
     const nav = document.getElementById('nav');
     if (e.target.closest('#abrir')) nav.classList.add('visible');
@@ -41,8 +42,10 @@ export function initEventosCarrito() {
     const btnAgregar = e.target.closest('.btn-agregar');
     if (btnAgregar) {
       const idClick = btnAgregar.dataset.id;
-      const catalogo = obtenerCarrito();
+      console.log(idClick);
+      const catalogo = await obtenerCatalogo(); 
       const producto = catalogo.find(p => p.id == idClick);
+      
 
       if (producto) {
         agregarAlCarrito(producto);

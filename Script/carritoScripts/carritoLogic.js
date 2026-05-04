@@ -52,3 +52,9 @@ export function seleccionarTodos(seleccionado) {
 
   guardarCarrito(carrito);
 }
+
+export async function obtenerCatalogo() {
+  const response = await fetch('https://fakestoreapi.com/products');
+  const data = await response.json();
+  return data;
+}
