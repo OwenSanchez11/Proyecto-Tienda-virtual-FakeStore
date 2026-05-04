@@ -44,7 +44,7 @@ function renderProducto(data) {
                     <p id="descripcion">${data.description}</p>
                     <p id="rating">Puntuación: ${data.rating.rate}</p>
                     <div class="buttons">
-                        <button class="btn-carrito">Agregar Al Carrito</button>
+                        <button class="btn-agregar" data-id="${data.id}">Agregar Al Carrito</button>
                         <button class="btn-comprar">Comprar ahora</button>
                     </div>
                 </div>

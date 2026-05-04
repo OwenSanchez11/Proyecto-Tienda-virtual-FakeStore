@@ -2,6 +2,7 @@
 const obtenerDatos = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
+    localStorage.setItem('productos', JSON.stringify(data));
     return data;
 }
 
@@ -18,7 +19,7 @@ const pintarCards = (contenedor, producto) => {
                     <div class="footer-card">
                     <h3>${producto.title}</h3>
                     <p>$${producto.price}</p>
-                    <button>Agregar al carrito</button>
+                    <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
                     </div>
             </div>
         
@@ -66,7 +67,7 @@ const renderElectrodomesticosDestacados = async() => {
                         ${recortarTexto(producto.title, 30)}
                     </h2>
                     <p>$${producto.price}</p>
-                    <button>Ver más</button>
+                    <button">Ver más</button>
                 </div>
             </div>
         `
@@ -76,10 +77,12 @@ const renderElectrodomesticosDestacados = async() => {
 renderElectrodomesticosDestacados();
 
 //función para obtener el id de cada producto y redirigir a la página de caracteristicas del producto
-
-document.addEventListener('click', (e) => {
+function manejarClickProductoPorId(e) {
     const element = e.target.closest('[data-action]');
+    const botonCarrito = e.target.closest('.btn-agregar');
 
+    if(botonCarrito) return;
+    
     if(!element) return;
 
     const action = element.dataset.action;
@@ -88,5 +91,14 @@ document.addEventListener('click', (e) => {
         const id = element.dataset.id;
         window.location.href =`Pages/producto.html?id=${id}`;
     }
+}
 
+
+//disparador de eventos
+document.addEventListener("click", (e) => {
+    manejarClickProductoPorId(e);
 })
+
+
+
+

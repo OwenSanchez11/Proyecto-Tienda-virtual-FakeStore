@@ -55,29 +55,33 @@
         
             <section class="carrito-compras">
                 <div class="title">
-                    <input type="checkbox" name="check" id="">
+                    <input type="checkbox" name="check" class="check-all">
                     <h2>PRODUCTOS DE LA TIENDA</h2>
                 </div>
 
                 <div class="detalles-producto">
-
-                    <div class="img-art">
-                        <input type="checkbox">
-                        <img src="../src/img/pantalon.jpg" alt="">
-                    </div>
-                    <div class="info-productos">
-                         <h2> TITULO DEL PRODUCTO </h2>
-                        
-                        <div class="buttons">
-                            <button class="btn-less"><i class="bi bi-dash"></i></button>
-                     
-                                <span>1</span>
-
-                            <button class="btn-more"><i class="bi bi-plus"></i></button>
                     
+                    <div class="producto">
+                        <div class="img-art">
+                            <input type="checkbox">
+                            <img src="../src/img/pantalon.jpg" alt="">
                         </div>
+                        <div class="info-productos">
+                            <h2> TITULO DEL PRODUCTO </h2>
+                            
+                            <div class="buttons">
+                                <button class="btn-less"><i class="bi bi-dash"></i></button>
+                        
+                                    <span>1</span>
+
+                                <button class="btn-more"><i class="bi bi-plus"></i></button>
+                        
+                            </div>
+                        </div>
+                        <span>$150.000</span>
                     </div>
-                    <span>$150.000</span>
+
+                    
                 </div> 
 
             </section>
@@ -87,16 +91,11 @@
             <div class="resumen-compra">
                 <h2>RESUMEN DE LA COMPRA</h2>
                 <div class="productos-cantidad">
-                    <p>PRODUCTOS:1</p>
-                    <span>$150.000</span>
-                </div>
-                <div class="envios">
-                    <p>ENVÍOS:</p>
-                    <span>Precio de envío</span>
+                    <p class="total-productos">PRODUCTOS:</p>
                 </div>
                 <div class="total">
                     <p>TOTAL</p>
-                    <span>$150.000</span>
+                    <p class="monto-total"></p>
                 </div>
 
                 <button class="btn-pagar">
@@ -128,6 +127,6 @@
         </div>
     </footer>
 
-    <script src="./Script/script-carrito.js"></script>
+    <script type="module" src="../Script/carritoScripts/indexCarrito.js"></script>
 </body>
 </html>

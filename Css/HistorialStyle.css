@@ -114,6 +114,12 @@ body {
     display: none;
 }
 
+.cerrar-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 .right-icons {
     display: flex;
     align-items: center;
@@ -287,12 +293,44 @@ h1 { font-size: 24px; margin-bottom: 20px; }
 /* Media query para adaptar a las pantallas pequeñas a partir de los 768px */
 @media (max-width: 768px) {
 
+ 
+
     .abrir-menu, .cerrar-menu {
-        display: none;
+        display: block;
+        background: none;      
+        border: none;        
+        padding: 0;           
+        margin: 0;
+        color: white;         
+        font-size: 30px;       
+        cursor: pointer;
+
     }
 
     .nav {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: darkslateblue;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: end;
+        padding: 40px;
+
+
     }
 
     /*Cambio la dirección a columnas para que se vean mejor y no se se sobreponga ningún elemento*/

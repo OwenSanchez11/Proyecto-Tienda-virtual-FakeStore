@@ -91,7 +91,7 @@ function renderProductos(productos) {
             <div class="card-footer">
                 <h2>${producto.title}</h2>
                 <p>$${producto.price}</p>
-                <button>Agregar al carrito</button>
+                <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
             </div>
         `;
 
@@ -124,7 +124,7 @@ document.addEventListener('click', (e) => {
     const card = e.target.closest('.card');
 
     if(!card) return;
-
+    if(e.target.classList.contains('btn-agregar')) return; // Evita redirigir al hacer clic en el botón "Agregar al carrito"
     const id = card.dataset.id;
 
     if(!id) return;
